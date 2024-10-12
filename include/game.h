@@ -3,6 +3,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
+#include "terrain.h"
 
 class Game {
 public : 
@@ -21,4 +22,5 @@ public :
 private :
     sf::RenderWindow* window;
     sf::Event ev;
+    Terrain* terrain; // While waiting for a proper scene object we add all object to the base game
 };
