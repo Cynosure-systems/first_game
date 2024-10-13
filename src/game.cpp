@@ -6,6 +6,7 @@ Game::Game() {
     vm.width = 500;
 
     this->window = new sf::RenderWindow(vm, "First game", sf::Style::Titlebar | sf::Style::Close);
+    this->terrain = new Terrain(0, sf::Vector2f(100, 100), sf::Vector2f(50, 50), sf::Color::Green); // Initialize Terrain for testing
 }
 
 Game::~Game() {
@@ -29,6 +30,7 @@ void Game::update() {
 }
 
 void Game::render() {
-    this->window->clear();
+    this->window->clear(sf::Color::Black);
+    this->window->draw(this->terrain->shape);
     this->window->display();
 }
