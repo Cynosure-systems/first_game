@@ -38,6 +38,7 @@ void Game::render() {
     this->window->clear(sf::Color::Black);
     this->window->draw(this->terrain->shape);
     this->player->render(*this->window);
+    this->terrain->render(*this->window);
 
     this->window->display();
 }
