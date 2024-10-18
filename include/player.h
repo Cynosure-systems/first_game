@@ -7,7 +7,8 @@ public :
     Player();
     ~Player() = default;
 
-    void update() override {};
+    void update() override;
+
     void render(sf::RenderWindow& window) override {window.draw(this->shape);};
     
 private :

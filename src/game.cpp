@@ -30,6 +30,8 @@ void Game::poll_events() {
 
 void Game::update() {
     this->poll_events();
+
+    this->player->update();
 }
 
 void Game::render() {

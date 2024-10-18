@@ -14,7 +14,7 @@ public :
     virtual void render(sf::RenderWindow& window) = 0;
     
 protected :
-    void apply_gravity(float dt) {velocity.y += this->g * dt};
+    void apply_gravity(float dt) {velocity.y += this->g * dt; };
 
     float life_state; // life : a value between 0 (dead) and 1
     sf::Vector2f hitbox; // The hitbox rectangle of the entity
