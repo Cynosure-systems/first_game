@@ -1,9 +1,6 @@
-//
-// Created by doph on 10/12/24.
-//
-#ifndef TERRAIN_H
-#define TERRAIN_H
-#include <SFML/Graphics.hpp>
+#pragma once 
+
+#include "sfml.h"
 
 class Terrain {
 public:
@@ -20,4 +17,4 @@ private:
     sf::Vector2f position;
     sf::Vector2f size;
 };
-#endif //TERRAIN_H
+

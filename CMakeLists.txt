@@ -19,9 +19,7 @@ file(GLOB_RECURSE SOURCES "src/*.cpp")
 file(GLOB_RECURSE HEADERS "include/*.h")
 
 # Add the executable
-add_executable(FirstGame ${SOURCES} ${HEADERS}
-        include/terrain.h
-        src/terrain.cpp)
+add_executable(FirstGame ${SOURCES} ${HEADERS})
 
 # Link SFML libraries
 target_link_libraries(FirstGame sfml-graphics sfml-window sfml-system)
