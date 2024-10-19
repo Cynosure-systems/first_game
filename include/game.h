@@ -3,6 +3,7 @@
 #include "sfml.h"
 #include "terrain.h"
 #include "player.h"
+#include "entity.h"
 
 class Game {
 public : 
@@ -17,6 +18,8 @@ public :
     }
 
     void poll_events();
+
+    void check_collision(Entity& entity, Terrain& terrain);
 
 private :
     sf::RenderWindow* window;

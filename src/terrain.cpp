@@ -3,16 +3,13 @@
 //
 #include "terrain.h"
 Terrain::Terrain(int type, const sf::Vector2f& position, const sf::Vector2f& size, const sf::Color& color) : type(type), position(position), size(size), color(color) {
-    shape.setPosition(position);
-    shape.setSize(size);
-    shape.setFillColor(color);
 
-    this->tiles_y = {1, 1, 1, 1, 1};
+    this->tiles_y = {400, 400, 400, 400, 400};
 
     for(int i = 0; i<this->tiles_y.size(); ++i) {
         auto tile = sf::RectangleShape(sf::Vector2f(50, 5));
         tile.setFillColor(sf::Color::Green);
-        tile.setPosition(50*i, 450 * tiles_y[i]);
+        tile.setPosition(50*i, tiles_y[i]);
 
         this->tiles.push_back(tile);
     }

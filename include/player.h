@@ -9,8 +9,7 @@ public :
 
     void update() override;
 
-    void render(sf::RenderWindow& window) override {window.draw(this->shape);};
+    void render(sf::RenderWindow& window) override {window.draw(this->hitbox);};
     
 private :
-    sf::RectangleShape shape;
 };

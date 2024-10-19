@@ -19,6 +19,8 @@ public:
 
     void render(sf::RenderWindow& window);
 
+    std::vector<sf::RectangleShape> get_tiles() {return this->tiles; };
+
     sf::RectangleShape shape; // This should be private and need to surchage draw for this class
     // no need to surcharge draw, we just create a "render" method that calls it for every tile of the terrain
 private:
