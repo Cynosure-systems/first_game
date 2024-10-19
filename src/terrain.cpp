@@ -4,7 +4,7 @@
 #include "terrain.h"
 Terrain::Terrain(int type, const sf::Vector2f& position, const sf::Vector2f& size, const sf::Color& color) : type(type), position(position), size(size), color(color) {
 
-    this->tiles_y = {400, 400, 400, 400, 400};
+    this->tiles_y = {400, 400, 400, 400, 400, 390, 380, 370, 370, 380};
 
     for(int i = 0; i<this->tiles_y.size(); ++i) {
         auto tile = sf::RectangleShape(sf::Vector2f(50, 5));
