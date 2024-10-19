@@ -5,6 +5,11 @@
 #include "player.h"
 #include "entity.h"
 
+/**
+ * @brief The Game class is responsible to update the scene and render it
+ * 
+ */
+
 class Game {
 public : 
     Game();

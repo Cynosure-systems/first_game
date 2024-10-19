@@ -2,6 +2,11 @@
 
 #include "entity.h"
 
+/**
+ * @brief The player is the entity of interest in the game
+ * 
+ */
+
 class Player : public Entity {
 public :
     Player();
