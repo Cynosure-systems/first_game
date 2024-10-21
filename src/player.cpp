@@ -11,23 +11,27 @@ Player::Player() {
     this->hitbox.setPosition(this->position);
 }
 
-void Player::update_input() {
+void Player::update_input() { 
+    /* Honestly not sure if the controls belong in this class 
+    *  Maybe it belongs in the game class where the inputs control the player with getters and setters
+    *  Although doing this might induce feature envy and long chain of calls... I dunno man
+    */
+    
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         this->position = sf::Vector2f(this->position.x - 1.f, this->position.y);
+    
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
         this->position = sf::Vector2f(this->position.x + 1.f, this->position.y);
+    
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space) && this->is_on_ground) {
-        std::cout << "JUMP !" << std::endl;
         this->velocity = sf::Vector2f(this->velocity.x, -30.f);
         this->is_on_ground = false;
     }
-        
     
     this->hitbox.setPosition(this->position);
 }
 
 void Player::update() {
-    //std::cout << "test" << std::endl;
     this->update_input();
     float dt = 0.1;
     this->apply_gravity(dt);
