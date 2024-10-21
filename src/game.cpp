@@ -6,6 +6,7 @@ Game::Game() {
     vm.width = 500;
 
     this->window = new sf::RenderWindow(vm, "First game", sf::Style::Titlebar | sf::Style::Close);
+    this->window->setFramerateLimit(150);
     this->terrain = new Terrain(0, sf::Vector2f(100, 100), sf::Vector2f(50, 50), sf::Color::Green); // Initialize Terrain for testing
 
 

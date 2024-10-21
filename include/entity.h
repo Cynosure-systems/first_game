@@ -11,7 +11,8 @@ class Entity {
 public :
     Entity() {
         life_state = 1.;
-        g = 9.8f;};
+        g = 9.8f;    
+    };
 
     ~Entity() = default;
 
@@ -47,10 +48,12 @@ public :
             this->velocity.y = 0.f;
             this->position.y -= this->position.y + entity_shape.height - shape.top;
             this->hitbox.setPosition(this->position);
+
+            this->is_on_ground = true;
         }
         //collision on the top
         // TO DO
-    }
+    };
     
 protected :
     void apply_gravity(float dt) {velocity.y += this->g * dt; }; // Just a function to update the acceleration of the entity
@@ -59,6 +62,8 @@ protected :
     sf::RectangleShape hitbox; // The hitbox rectangle of the entity
     sf::Vector2f position; // The position of the entity;
     sf::Vector2f velocity; // The velocity of the entity
+
+    bool is_on_ground;
 
 private :
     float g;
